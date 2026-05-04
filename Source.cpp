@@ -8,40 +8,40 @@ using namespace std;
 int main() {
 	SetConsoleOutputCP(1251);
 	SetConsoleCP(1251);
-	cout << "Завдання 1: \n";
+	cout << "Р—Р°РІРґР°РЅРЅСЏ 1: \n";
 	vector<int>v;
 	v = {1, 5, 8, 1, 1, 4, 2, 9, 8 };
-	cout << "Початковий масив: \n";
+	cout << "РџРѕС‡Р°С‚РєРѕРІРёР№ РјР°СЃРёРІ: \n";
 	for (auto it = v.begin(); it != v.end(); it++) {
 		cout << *it << " ";
 	}
-	cout << "\n Без дублікатів \n";
+	cout << "\n Р‘РµР· РґСѓР±Р»С–РєР°С‚С–РІ \n";
 	set<int> Uniqset(v.begin(), v.end());
 	for (auto it = Uniqset.begin(); it != Uniqset.end(); it++) {
 		cout << *it << " ";
 	}
-	cout << "\n Завдання 2:\n";
+	cout << "\n Р—Р°РІРґР°РЅРЅСЏ 2:\n";
 	map<string, int> grades;
-	grades["Іван"] = 100;
-	grades["Ярина"] = 95;
-	grades["Володимир"] = 51;
+	grades["Р†РІР°РЅ"] = 100;
+	grades["РўРµС‚СЏРЅР°"] = 95;
+	grades["РќР°Р·Р°СЂ"] = 51;
 	/*for (auto it = grades.begin(); it != grades.end(); it++)
 		cout << it->first << "->" << it->second << endl;*/
 	for (auto& pair : grades)
 		cout << pair.first << "->" << pair.second << endl;
-	cout << "Завдання 3: \n";
+	cout << "Р—Р°РІРґР°РЅРЅСЏ 3: \n";
 	vector<int> mark = { 90, 90, 51, 57, 67 , 84, 75, 51 };
 	unordered_map<int, int> freq;
 	for (int g : mark)
 		freq[g]++;
 	for (auto& pair : freq)
-		cout << "Оцінка" << pair.first << "->" << pair.second << " разів\n";
-	cout << "Завдання 4 \n";
+		cout << "РћС†С–РЅРѕРє" << pair.first << "->" << pair.second << " СЂР°Р·С–РІ \n";
+	cout << "Р—Р°РІРґР°РЅРЅСЏ 4 \n";
 	multimap<string, string> library;
-	library.insert({ "Шевченко","Кобзар" });
-	library.insert({ "Леся Українка","Лісова мавка" });
-	library.insert({ "Франко","Каменяр" });
-	library.insert({ "Шевченко", "Катерина" });
+	library.insert({ "РЁРµРІС‡РµРЅРєРѕ","РљРѕР±Р·Р°СЂ" });
+	library.insert({ "Р›РµСЃСЏ РЈРєСЂР°С—РЅРєР°","Р›С–СЃРѕРІР° РїС–СЃРЅСЏ" });
+	library.insert({ "Р¤СЂР°РЅРєРѕ","РљР°РјРµРЅСЏСЂ" });
+	library.insert({ "РЁРµРІС‡РµРЅРєРѕ", "РљР°С‚РµСЂРёРЅР°" });
 	for (auto& pair : library)
 		cout << pair.first << "->" << pair.second << endl;
 	return 0;
